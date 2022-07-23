@@ -10,10 +10,8 @@ import pkg from './package.json';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  esbuild: {
-    minify: true,
-  },
   build: {
+    minify: 'esbuild',
     lib: {
       entry: './lib/index.ts',
       formats: ['cjs', 'es'],
