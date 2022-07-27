@@ -18,6 +18,7 @@ export default defineConfig({
       fileName: (filename) => `${pkg.name}-${filename}.js`,
     },
     rollupOptions: {
+      external: [...Object.keys(pkg.peerDependencies)],
       output: {
         sourcemap: true,
       },
