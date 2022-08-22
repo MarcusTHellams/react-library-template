@@ -4,10 +4,7 @@ type InputProps = {
   label: string;
   name: string;
   error?: string | undefined;
-} & React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
->;
+} & React.ComponentPropsWithoutRef<'input'>;
 
 export const Input = ({ label, name, error, ...props }: InputProps) => {
   return (
