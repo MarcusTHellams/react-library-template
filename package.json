@@ -14,9 +14,9 @@
     "lint": "eslint . --config .eslintrc.build.json --ext .ts,.tsx --fix --ignore-path .gitignore",
     "build": "tsc && vite build && tsc --project tsconfig.build.json",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:ci": "vitest run",
-    "test:coverage": "vitest --watch=false --silent --coverage",
+    "test": "vitest --reporter=verbose",
+    "test:ci": "vitest run --reporter=verbose",
+    "test:coverage": "vitest --watch=false --silent --coverage --reporter=verbose",
     "prepare": "husky install"
   },
   "devDependencies": {
