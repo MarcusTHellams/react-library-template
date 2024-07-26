@@ -29,7 +29,7 @@
     "lint": "eslint . --ext ts,tsx --fix --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0",
     "format": "prettier . --write --ignore-path .gitignore && git update-index --again",
     "preview": "vite preview",
-    "publish": "npm publish --access=public",
+    "publish": "npm publish",
     "prepublish": "npm run build",
     "prepare": "husky"
   },
