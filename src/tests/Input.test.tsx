@@ -21,7 +21,7 @@ describe('Testing Input Component', () => {
           name="username"
           error="Houston we have a problem"
           label="Username:"
-        />
+        />,
       );
       expect(screen.getByRole('alert')).toBeInTheDocument();
       expect(screen.getByText('Houston we have a problem')).toBeInTheDocument();

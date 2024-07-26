@@ -1,15 +1,14 @@
-/// <reference types="vitest" />
-/// <reference types="vite/client" />
-
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
-// @ts-ignore
 import pkg from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  server: {
+    open: true,
+  },
   build: {
     minify: 'esbuild',
     lib: {
@@ -23,10 +22,5 @@ export default defineConfig({
         sourcemap: true,
       },
     },
-  },
-  test: {
-    globals: true,
-    environment: 'jsdom',
-    setupFiles: ['src/tests/setup.ts'],
   },
 });
